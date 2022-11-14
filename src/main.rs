@@ -1,4 +1,5 @@
 #![allow(non_snake_case)]
+#![feature(fs_try_exists)]
 mod app;
 mod downloader;
 use app::App;
