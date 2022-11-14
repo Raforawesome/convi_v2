@@ -9,7 +9,6 @@ body {
 h1 {
     text-align: center;
     font-size: 2.8rem;
-    margin-top: 5vh;
     color: #FFFFFF;
 }
 
@@ -50,4 +49,31 @@ button:hover {
 
 button:active {
     background-color: rgb(60, 60, 60);
+}
+
+.inline-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inline {
+    display: inline-block;
+    margin-left: 10vw;
+}
+
+select {
+    -webkit-appearance: none;
+    width: 15vw;
+    height: 4vh;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(50, 50, 50);
+    color: #FFFFFF;
+}
+
+*:focus {
+    outline: 0;
 }
