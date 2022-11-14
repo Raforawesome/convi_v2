@@ -15,7 +15,7 @@ fn main() {
                     width: 600.0,
                     height: 600.0,
                 })
-                .with_title("Convi")
+                .with_title("")
         })
         .with_disable_context_menu(true)
     });
