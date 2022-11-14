@@ -1,5 +1,5 @@
+use std::fs::{self, File};
 use std::path::PathBuf;
-use std::fs::{ self, File };
 
 pub fn get_data_dir() -> PathBuf {
     let home_dir: PathBuf = dirs::home_dir().unwrap();
@@ -10,13 +10,13 @@ pub fn get_data_dir() -> PathBuf {
     data_dir
 }
 
-pub fn get_or_create_dir(dir_name: &str) -> PathBuf {
+pub fn get_or_create_dir(dir_name: &str) -> Result<PathBuf, std::io::Error> {
     let mut data_dir = get_data_dir();
     data_dir.push(dir_name);
     if !data_dir.exists() {
-        let _ = fs::create_dir(&data_dir);
+        let _ = fs::create_dir(&data_dir)?;
     }
-    data_dir
+    Ok(data_dir)
 }
 
 pub fn get_or_create_file(file_name: &str) -> Result<File, std::io::Error> {
