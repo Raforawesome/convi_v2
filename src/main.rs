@@ -1,5 +1,6 @@
 #![allow(non_snake_case)]
 mod app;
+mod downloader;
 use app::App;
 use dioxus::desktop::tao::dpi::LogicalSize;
 
