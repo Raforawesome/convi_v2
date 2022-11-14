@@ -5,10 +5,12 @@ mod downloader;
 use app::App;
 use dioxus::desktop::tao::dpi::LogicalSize;
 
+pub const FORMATS: [&'static str; 5] = ["mp4", "mkv", "mov", "png", "jpg"];
+
 fn main() {
     dioxus::desktop::launch_cfg(App, |c| {
         c.with_window(|w| {
-            w.with_resizable(true)
+            w.with_resizable(false)
                 .with_inner_size(LogicalSize {
                     width: 600.0,
                     height: 600.0,
