@@ -72,8 +72,15 @@ select {
     border-radius: 2px;
     background-color: rgb(50, 50, 50);
     color: #FFFFFF;
+    padding-left: 2vw;
 }
 
 *:focus {
     outline: 0;
+}
+
+.big-button {
+    height: 7vh;
+    width: 22vw;
+    font-size: 1.1rem;
 }
